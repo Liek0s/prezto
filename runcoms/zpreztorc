@@ -27,13 +27,15 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal'    \
   'editor'      \
-  'git'         \
   'tmux'        \
   'history'     \
   'directory'   \
   'spectrum'    \
   'utility'     \
+  'ssh'         \
   'completion'  \
+  'git'         \
+  'history-substring-search'\
   'prompt'
 
 #
@@ -85,7 +87,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 #
 
 # Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman' frontend 'pacaur'
 
 #
 # Prompt
