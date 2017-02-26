@@ -16,3 +16,7 @@ prompt liekos
 # Customize to your needs...
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
