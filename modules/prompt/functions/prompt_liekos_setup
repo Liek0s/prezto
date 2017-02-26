@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/zsh
 # vim: set syntax=shell
 
@@ -5,6 +6,12 @@
 function prompt_liekos_precmd {
     setopt LOCAL_OPTIONS
     unsetopt XTRACE KSH_ARRAYS
+=======
+
+function prompt_liekos_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+>>>>>>> 6e2b946dec85d38934e09699401b7af6d836a679
 
   # Get Git repository information.
   if (( $+functions[git-info] )); then
