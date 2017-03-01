@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/zsh
 # vim: set syntax=shell
 
@@ -6,21 +5,15 @@
 function prompt_liekos_precmd {
     setopt LOCAL_OPTIONS
     unsetopt XTRACE KSH_ARRAYS
-=======
 
-function prompt_liekos_precmd {
-  setopt LOCAL_OPTIONS
-  unsetopt XTRACE KSH_ARRAYS
->>>>>>> 6e2b946dec85d38934e09699401b7af6d836a679
+    # Get Git repository information.
+    if (( $+functions[git-info] )); then
+        git-info
+    fi
 
-  # Get Git repository information.
-  if (( $+functions[git-info] )); then
-      git-info
-  fi
-
-  if (( $+functions[python-info] )); then
-      python-info
-  fi
+    if (( $+functions[python-info] )); then
+        python-info
+    fi
 }
 
 function prompt_liekos_setup {
@@ -55,10 +48,5 @@ function prompt_liekos_setup {
     RPROMPT='$python_info[virtualenv]'
 }
 
-
-
 prompt_liekos_setup "$@"
 
-
-# ┌┄[jack]┄(master)
-# └┄% 
