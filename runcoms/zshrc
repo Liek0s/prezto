@@ -33,4 +33,13 @@ alias e="vim"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
 export FZF_CTRL_T_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
 
+# Python Virtualenvs
+export WORKON_HOME="~/.virtualenvs/"
+source /usr/bin/virtualenvwrapper.sh
+
+
+# Aliases
+alias vim="nvim"
+alias e="vim"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
