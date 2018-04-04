@@ -9,9 +9,7 @@
 # Browser
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
+export BROWSER='firefox'
 
 #
 # Editors
@@ -19,6 +17,7 @@ fi
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+
 export PAGER='less'
 
 #

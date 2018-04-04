@@ -19,4 +19,13 @@ export VISUAL="nvim"
 
 source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
 
+# Python Virtualenvs
+export WORKON_HOME="~/.virtualenvs/"
+source /usr/bin/virtualenvwrapper.sh
+
+
+# Aliases
+alias vim="nvim"
+alias e="vim"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
