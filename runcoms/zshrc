@@ -19,27 +19,22 @@ export VISUAL="nvim"
 
 # Aliases
 alias vim="nvim"
+alias vi="vim"
+alias v="vi"
 alias e="vim"
 
 
-[ -f ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ] && \
-    source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
+if [ -f ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ]; then
+	source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
+fi
 
 # Python Virtualenvs
-[ -f /usr/bin/virtualenvwrapper.sh ] && \
-    source /usr/bin/virtualenvwrapper.sh && \
-    export WORKON_HOME="$HOME/.virtualenvs/"
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+    export WORKON_HOME="~/.virtualenvs/"
+fi
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
-export FZF_CTRL_T_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
-
-# Python Virtualenvs
-export WORKON_HOME="~/.virtualenvs/"
-source /usr/bin/virtualenvwrapper.sh
-
-
-# Aliases
-alias vim="nvim"
-alias e="vim"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
