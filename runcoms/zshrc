@@ -17,12 +17,6 @@ promptinit && prompt liekos
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# Aliases
-alias vim="nvim"
-alias vi="vim"
-alias v="vi"
-alias e="vim"
-
 
 if [ -f ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ]; then
 	source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
@@ -34,7 +28,14 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME="~/.virtualenvs/"
 fi
 
+# Aliases
+alias vim="nvim"
+alias vi="vim"
+alias e="vim"
+alias cat="bat"
+alias find="fd"
+
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
