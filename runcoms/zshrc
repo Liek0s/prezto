@@ -11,22 +11,26 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zsh/init.zsh" ]]; then
 fi
 
 autoload -Uz promptinit
-promptinit
-prompt liekos
+# set prompt
+promptinit && prompt liekos
 # Customize to your needs...
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-[ -f ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ] && \
-	source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
-
-# Python Virtualenvs
-
-[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh && export WORKON_HOME="~/.virtualenvs/"
-
-
 # Aliases
 alias vim="nvim"
 alias e="vim"
+
+
+[ -f ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh ] && \
+    source ~/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh
+
+# Python Virtualenvs
+[ -f /usr/bin/virtualenvwrapper.sh ] && \
+    source /usr/bin/virtualenvwrapper.sh && \
+    export WORKON_HOME="$HOME/.virtualenvs/"
+
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
+export FZF_CTRL_T_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
