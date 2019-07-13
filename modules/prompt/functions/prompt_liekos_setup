@@ -33,7 +33,7 @@ function prompt_liekos_setup {
 
     zstyle ':prezto:module:git:info'            verbose 'yes'
     zstyle ':prezto:module:git:info:dirty'      format "] %F{red}✘%f%%b"
-    zstyle ':prezto:module:git:info:clean'      format "] %F{green}✔%f%%b"
+    zstyle ':prezto:module:git:info:clean'      format "] %F{green}✔%f%b"
     zstyle ':prezto:module:git:info:branch'     format "%%B%F{$COLOUR2}[%f%F{$COLOUR1} %b%f"
     zstyle ':prezto:module:git:info:commit'     format "%%B%F{$COLOUR2}[%f%F{$COLOUR1} %c%f"
     zstyle ':prezto:module:git:info:position'   format "%%B%F{$COLOUR2}[%f%F{$COLOUR1} %p%f"
