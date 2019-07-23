@@ -28,19 +28,19 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'editor'      \
-  'git'         \
-  'history'     \
-  'terminal'    \
-  'ssh'         \
-  'python'      \
-  'node'        \
-  'pacman'      \
-  'directory'   \
-  'spectrum'    \
-  'utility'     \
-  'completion'  \
-  'fasd'        \
+  'editor' \
+  'git' \
+  'history' \
+  'terminal' \
+  'ssh' \
+  'python' \
+  'node' \
+  'pacman' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'fasd' \
   'history-substring-search' \
   'autosuggestions' \
   'prompt'
@@ -141,23 +141,6 @@ zstyle ':prezto:module:prompt' theme 'liekos'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
-
-#
-# Ruby
-#
-
-# Auto switch the Ruby version on directory change.
-# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-
-#
-# Screen
-#
-
-# Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:screen:auto-start' local 'yes'
-
-# Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
 
 #
 # SSH

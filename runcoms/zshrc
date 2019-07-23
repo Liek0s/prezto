@@ -34,8 +34,16 @@ alias vi="vim"
 alias e="vim"
 alias cat="bat"
 alias find="fd"
+alias ag="ag --color-match '01;31' --color-path '01;34' --color-line-number '01;30' --nogroup"
+
+if command -v htop >/dev/null 2>&1; then
+    alias htop="htop --tree"
+fi
+
+[ ! -f "$HOME/.ignore" ] && touch ~/.ignore
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --ignore-file ~/.ignore"
-export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 35% --layoutreverse --preview "bat"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
